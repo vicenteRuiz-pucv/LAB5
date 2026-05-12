@@ -46,3 +46,17 @@ graph.c:58:27: error: expected ‘;’ before ‘}’ token
    60 | }
       | ~                          
 d7ae5f5
+Tue May 12 03:38:10 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:58:27: error: expected ‘;’ before ‘}’ token
+   58 |     list_pushBack(lista,e)
+      |                           ^
+      |                           ;
+   59 | 
+   60 | }
+      | ~                          
+af0f27b
