@@ -27,3 +27,22 @@ Tue May 12 03:33:11 PM UTC 2026:
  1 file changed, 5 insertions(+)
  tests:  0|0
 2217756
+Tue May 12 03:37:57 PM UTC 2026: 
+ graph.c | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:51:28: error: ‘pair’ undeclared (first use in this function); did you mean ‘par’?
+   51 |     List* lista = (List *) pair->value;
+      |                            ^~~~
+      |                            par
+graph.c:51:28: note: each undeclared identifier is reported only once for each function it appears in
+graph.c:58:27: error: expected ‘;’ before ‘}’ token
+   58 |     list_pushBack(lista,e)
+      |                           ^
+      |                           ;
+   59 | 
+   60 | }
+      | ~                          
+d7ae5f5
