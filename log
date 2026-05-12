@@ -86,3 +86,15 @@ graph.c:73:28: error: returning ‘void *’ from a function with return type �
    73 |     if(par == NULL) return NULL;
       |                            ^~~~
 579e60f
+Tue May 12 03:48:26 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:72:67: error: ‘label’ undeclared (first use in this function); did you mean ‘label2’?
+   72 |     MapPair * par = (MapPair *) map_search(g->adjacencyMap,(void*)label);
+      |                                                                   ^~~~~
+      |                                                                   label2
+graph.c:72:67: note: each undeclared identifier is reported only once for each function it appears in
+62a26c0
