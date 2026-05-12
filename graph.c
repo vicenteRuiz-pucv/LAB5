@@ -91,9 +91,20 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
 // Retorna una nueva List* que contiene elementos de tipo char* (las etiquetas)
 List* getAdjacentLabels(Graph* g, const char* label) {
     if (!g || !label) return NULL;
+    //usamos la funcion anterior!
+    List * lista = getEdges(g,label);
 
+    List* nuevaLista = list_create();
 
-    return NULL; 
+    Edge* temp= (Edge *) list_first(lista);
+    while(temp != NULL)
+        {
+            //agregamos el nombre de los vecinos!
+            list_pushBack(nuevaLista,temp->target);
+            temp= (Edge *) list_next(lista);
+        }
+
+    return nuevaLista; 
 }
 
 void destroyGraph(Graph* g) {
