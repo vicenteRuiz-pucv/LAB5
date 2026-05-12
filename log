@@ -71,3 +71,18 @@ Tue May 12 03:40:26 PM UTC 2026:
  tests:  8|2
 ========================================
 6dd47e9
+Tue May 12 03:48:08 PM UTC 2026: 
+ graph.c | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:72:67: error: ‘label’ undeclared (first use in this function); did you mean ‘label2’?
+   72 |     MapPair * par = (MapPair *) map_search(g->adjacencyMap,(void*)label);
+      |                                                                   ^~~~~
+      |                                                                   label2
+graph.c:72:67: note: each undeclared identifier is reported only once for each function it appears in
+graph.c:73:28: error: returning ‘void *’ from a function with return type ‘int’ makes integer from pointer without a cast [-Wint-conversion]
+   73 |     if(par == NULL) return NULL;
+      |                            ^~~~
+579e60f
